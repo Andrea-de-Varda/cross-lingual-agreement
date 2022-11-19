@@ -27,12 +27,12 @@ try:
 except FileExistsError:
     print("Directory " , dirName ,  "already exists")
 
-file_train_sentences = "abl_old/"+results.sentences+"_train.txt"
-file_test_sentences = "abl_old/"+results.sentences+"_test.txt"
-file_train_tags = "abl_old/"+results.tags+"_train.txt"
-file_test_tags = "abl_old/"+results.tags+"_test.txt"
-file_train_positions = "abl_old/"+results.positions+"_train.txt"
-file_test_positions = "abl_old/"+results.positions+"_test.txt"
+file_train_sentences = results.sentences+"_train.txt"
+file_test_sentences = results.sentences+"_test.txt"
+file_train_tags = results.tags+"_train.txt"
+file_test_tags = results.tags+"_test.txt"
+file_train_positions = results.positions+"_train.txt"
+file_test_positions = results.positions+"_test.txt"
 
 ##############################
 # EXTRACTING REPRESENTATIONS #
