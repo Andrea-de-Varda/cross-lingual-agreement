@@ -51,31 +51,30 @@ summary(res)
 # LONG-DISTANCE #
 #################
 
-vp_100 <- list()
+s_100 <- list()
 
 german <- unlist(py_load_object("de_long_vp_coord/ordering"))
 german <- paste(german[threshold_8 < german & german < threshold_9][1:100])
-vp_100$German <- german
-min(vp_100$German)
+s_100$German <- german
 
 english <- unlist(py_load_object("en_long_vp_coord/ordering"))
 english <- paste(english[threshold_8 < english & english < threshold_9][1:100])
-vp_100$English <- english
+s_100$English <- english
 
 hebrew <- unlist(py_load_object("he_long_vp_coord/ordering"))
 hebrew <- paste(hebrew[threshold_8 < hebrew & hebrew < threshold_9][1:100])
-vp_100$Hebrew <- hebrew
+s_100$Hebrew <- hebrew
 
 french <- unlist(py_load_object("fr_long_vp_coord/ordering"))
 french <- paste(french[threshold_8 < french & french < threshold_9][1:100])
-vp_100$French <- french
+s_100$French <- french
 
 russian <- unlist(py_load_object("ru_long_vp_coord/ordering"))
 russian <- paste(russian[threshold_8 < russian & russian < threshold_9][1:100])
-vp_100$Russian <- russian
+s_100$Russian <- russian
 
 total=768
-res=supertest(vp_100, n=total)
+res=supertest(s_100, n=total)
 plot(res, sort.by="size", margin=c(2,2,2,2), color.scale.pos=c(0.85,1), legend.pos=c(0.86,0.15))
 summary(res)
 
