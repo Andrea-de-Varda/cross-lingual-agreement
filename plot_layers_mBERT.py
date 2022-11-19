@@ -28,14 +28,14 @@ for name, layer in zip(["ru", "en", "he", "de", "fr"],[ru_layer_vp, en_layer_vp,
 out['mean'] = out.mean(axis=1)  
 
 # visualize layers, simple agreement
-ru_layer_vp = pd.read_csv('ru_simple_agreement/layerwise.csv')
-en_layer_vp = pd.read_csv('en_simple_agreement/layerwise.csv')
-he_layer_vp = pd.read_csv('he_simple_agreement/layerwise.csv')
-de_layer_vp = pd.read_csv('de_simple_agreement/layerwise.csv')
-fr_layer_vp = pd.read_csv('fr_simple_agreement/layerwise.csv')
+ru_layer_s = pd.read_csv('ru_simple_agreement/layerwise.csv')
+en_layer_s = pd.read_csv('en_simple_agreement/layerwise.csv')
+he_layer_s = pd.read_csv('he_simple_agreement/layerwise.csv')
+de_layer_s = pd.read_csv('de_simple_agreement/layerwise.csv')
+fr_layer_s = pd.read_csv('fr_simple_agreement/layerwise.csv')
 
 fig = plt.figure(dpi=1200)
-for layer, name in zip([ru_layer_vp, en_layer_vp, he_layer_vp, de_layer_vp, fr_layer_vp], ["Russian", "English", "Hebrew", "German", "French"]):
+for layer, name in zip([ru_layer_s, en_layer_s, he_layer_s, de_layer_s, fr_layer_s], ["Russian", "English", "Hebrew", "German", "French"]):
     plt.plot(layer.l, layer.acc, label=name)
 plt.axvline(7, linestyle='--', color="black")
 plt.xlabel("Layer")
@@ -44,7 +44,7 @@ plt.legend(loc=2)
 plt.show()
 
 out_s = pd.DataFrame()
-for name, layer in zip(["ru", "en", "he", "de", "fr"],[ru_layer_vp, en_layer_vp, he_layer_vp, de_layer_vp, fr_layer_vp]):
+for name, layer in zip(["ru", "en", "he", "de", "fr"],[ru_layer_s, en_layer_s, he_layer_s, de_layer_s, fr_layer_s]):
     out_s[name] = layer.acc
 
 out_s['mean'] = out_s.mean(axis=1) 
