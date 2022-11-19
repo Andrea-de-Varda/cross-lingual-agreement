@@ -17,3 +17,9 @@ We train a logistic classifier to predict the grammaticality of a token given th
 
 #### Constructing the datasets
 The file `make_data.py` creates the train-test sets for the probing from the [CLAMS](https://aclanthology.org/2020.acl-main.490/) dataset. It also performs some checks on the obtained data. It needs to be run from the same folder as the CLAMS dataset, as downloaded from the [GitHub repository](https://github.com/aaronmueller/clams).
+
+#### Probing
+The files `probe_verb_mBERT.py` and `probe_verb_mBERT.py` perform the probing experiments on the data obtained in the previous step. They should be run as follows:
+```
+python3 probe_verb_mBERT.py -c_sentences <path/to/sentences> -c_tags <path/to/tags> -c_positions <path/to/positions>
+```
