@@ -18,7 +18,7 @@ results = parser.parse_args()
 
 l1 = 0.001
 l2 = 0.001
-epochs = 10
+epochs = 30
 
 dirName = results.sentences+"-XLM"
 try:
