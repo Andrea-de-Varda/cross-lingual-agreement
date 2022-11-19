@@ -11,3 +11,9 @@ We train a logistic classifier to predict the grammaticality of a token given th
 
 
 *Note: our scripts rely on [NeuroX](https://www.semanticscholar.org/paper/NeuroX%3A-A-Toolkit-for-Analyzing-Individual-Neurons-Dalvi-Nortonsmith/3c8d7c5a9eb3bf84c0ea47e3416f79d5a49f71fd), a toolkit for analyzing individual neurons in neural networks, which has an [excellent documentation](https://neurox.qcri.org/docs/) for those that may be interested in replicating our analyses. Also note that the intersection analyses are performed with R, while everything else is in Python.*
+
+
+## Files
+
+### Constructing the datasets
+The file `make_data.py` creates the train-test sets for the probing from the [CLAMS](https://aclanthology.org/2020.acl-main.490/) dataset. It also performs some checks on the obtained data. It needs to be run from the same folder as the CLAMS dataset, as downloaded from the [GitHub repository](https://github.com/aaronmueller/clams).
