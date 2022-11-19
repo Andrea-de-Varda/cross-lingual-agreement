@@ -23,3 +23,7 @@ The files `probe_verb_mBERT.py` and `probe_verb_mBERT.py` perform the probing ex
 ```
 python3 probe_verb_mBERT.py -c_sentences <path/to/sentences> -c_tags <path/to/tags> -c_positions <path/to/positions>
 ```
+Where the tags correspond to the grammaticality of the sentence (grammatical-ungrammatical) and the positions correspond to the indexes of the verb tokens, on which the probing is performed.
+
+#### Intersection analysis
+The R script for performing the intersection analysis is in `Plot_intersections.R`. The intersection analyses test the statistical significance of the set intersections between the top-100 neurons identified with the probing task. 
