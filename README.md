@@ -13,7 +13,7 @@ We train a logistic classifier to predict the grammaticality of a token given th
 *Note: our scripts rely on [NeuroX](https://www.semanticscholar.org/paper/NeuroX%3A-A-Toolkit-for-Analyzing-Individual-Neurons-Dalvi-Nortonsmith/3c8d7c5a9eb3bf84c0ea47e3416f79d5a49f71fd), a toolkit for analyzing individual neurons in neural networks, which has an [excellent documentation](https://neurox.qcri.org/docs/) for those that may be interested in replicating our analyses. Also note that the intersection analyses are performed with R, while everything else is in Python.*
 
 
-### Files
+### Files - main experiment
 
 #### Constructing the datasets
 The file `make_data.py` creates the train-test sets for the probing from the [CLAMS](https://aclanthology.org/2020.acl-main.490/) dataset. It also performs some checks on the obtained data. It needs to be run from the same folder as the CLAMS dataset, as downloaded from the [GitHub repository](https://github.com/aaronmueller/clams).
@@ -27,3 +27,14 @@ Where the tags correspond to the grammaticality of the sentence (grammatical-ung
 
 #### Intersection analysis
 The R script for performing the intersection analysis is in `Plot_intersections.R`. The intersection analyses test the statistical significance of the set intersections between the top-100 neurons identified with the probing task. 
+
+
+
+### Files - follow-up analyses
+
+#### Constructing the Italian dataset
+In a follow-up analysis, we test the cross-lingual neurons identified before in Italian, a language that is not present in the [CLAMS](https://aclanthology.org/2020.acl-main.490/) dataset. To do so, we create four agreement conditions by computing the Cartesian product between determiners (D), nouns (N), and verbs (V).
+1. Singular agreement: $D$ × $N$ × $V$
+2. Plural agreement: $D_p$ × $N_p$ × $V_p$
+3. Violated singular agreement: $D$ × $N$ × $V_p$
+4. Violated plural agreement: $D_p$ × $N_p$ × $V$
