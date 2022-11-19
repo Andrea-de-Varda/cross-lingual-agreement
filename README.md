@@ -25,6 +25,8 @@ python3 probe_verb_mBERT.py -c_sentences <path/to/sentences> -c_tags <path/to/ta
 ```
 Where the tags correspond to the grammaticality of the sentence (grammatical-ungrammatical) and the positions correspond to the indexes of the verb tokens, on which the probing is performed.
 
+We also experiment with the _probeless_ ranking method, proposed by [Antverg & Belinkov (2022)](https://arxiv.org/abs/2110.07483). The scripts for performing the _probeless_ analysis are `probeless.py` and `probeless-XLM.py`.
+
 #### Intersection analysis
 The R script for performing the intersection analysis is in `Plot_intersections.R`. The intersection analyses test the statistical significance of the set intersections between the top-100 neurons identified with the probing task. 
 
