@@ -32,9 +32,15 @@ The R script for performing the intersection analysis is in `Plot_intersections.
 
 ### Files - follow-up analyses
 
+#### 
+
 #### Constructing the Italian dataset
-In a follow-up analysis, we test the cross-lingual neurons identified before in Italian, a language that is not present in the [CLAMS](https://aclanthology.org/2020.acl-main.490/) dataset. To do so, we create four agreement conditions by computing the Cartesian product between determiners (D), nouns (N), and verbs (V).
+In a follow-up analysis, we test the cross-lingual neurons identified before in Italian, a language that is not present in the [CLAMS](https://aclanthology.org/2020.acl-main.490/) dataset. To do so, we create four agreement conditions (`make_italian_dataset.py`) by computing the Cartesian product between determiners (D), nouns (N), and verbs (V).
 1. Singular agreement: $D$ × $N$ × $V$
 2. Plural agreement: $D_p$ × $N_p$ × $V_p$
 3. Violated singular agreement: $D$ × $N$ × $V_p$
 4. Violated plural agreement: $D_p$ × $N_p$ × $V$
+
+We then test the cross-lingual neurons identified before with the script `it_test_single_neurons.py`
+
+
